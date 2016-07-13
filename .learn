@@ -1,5 +1,12 @@
 tags:
-  - tag1
+  - node
+  - require
+  - exports
+  - modules
+  - dependency management
+  - files
 languages:
-  - language1
+  - javascript
 resources: 0
+type:
+  - readme
