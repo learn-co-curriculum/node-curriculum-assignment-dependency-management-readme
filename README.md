@@ -1,6 +1,4 @@
 
-Quote about standing on the shoulders of giants
-
 # Node Dependency Management
 
 So far, all our code has been written in a single file. But for big projects, writing everything in one giant file becomes hard to manage. In this lesson, we'll cover how to spread code out over several files.
