@@ -1,19 +1,19 @@
-## Node Dependency Management
+# Node Dependency Management
 You've already learned how to build a small, single file application in Node.js - congrats!
 
 Now we'll discuss how to break up your app into smaller related chunks of code called modules to help keep things organized as your code base grows.
 
-###### Why modules?
+## Why modules?
 Think of your application as though it were a business. In the early stages when your team is small, having everyone work in the same room is totally reasonable.
 
 As your company scales and you hire employees to perform specific functions, you'll eventually need to organize your company into departments; each with its own special purpose (eg: sales, engineering, project management).
 
-Modules provide the same organizational structure and value for you application!
+Modules provide the same organizational structure and value for your application!
 
-###### Dependencies and NPM
-We'll introduce you to the concept of modules (which we'll sometimes refer to as packages) and dependencies by creating a basic app with Express; the popular Node web application framework.
+## Dependencies and NPM
+We'll introduce you to the concept of modules (which we'll sometimes refer to as packages) and dependencies by creating a basic app with Express - the popular Node web application framework.
 
-Express can be installed into your application via NPM, Node's package (module) management system. We can use the NPM command line tool that ships with node to install packages into our application from the npm registry.
+Express can be installed into your application via NPM, Node's package (module) management system. We can use the NPM command line tool that ships with Node to install packages into our application from the NPM registry.
 
 Let's use NPM to install our app's very first dependency: Express.
 
@@ -38,7 +38,7 @@ Just go ahead and enter the name of your main file then press `enter`
 
 Next we'll install the Express package:
 ```
-npm install express --save
+$ npm install express --save
 ```
 NPM will search the registry for the Express package and download it to the `node_modules` folder in your projects root directory. The `--save` part just tracks Express as a new dependency in your `package.json` file.
 
@@ -66,7 +66,7 @@ Now that express is available to our main application, we can use its methods to
 
 Using `require()` to import Express from another location within our app allows us to expand the capability of our main application logic in a way that's clean and manageable.
 
-###### Creating your own modules
+## Creating your own modules
 NPM is full of packages you can use in your app to speed up development and build great things.
 
 But what if you wanted to build your own modules? Great question!
@@ -84,9 +84,9 @@ exports.area = (r) => PI * r * r;
 exports.circumference = (r) => 2 * PI * r;
 
 ```
-Node modules contain an `exports` object that we bind our modules functionality to. Anything bound to a module's exports object will be available to any part of our app that imports the module using `require()`.
+Node modules contain an `exports` object we can bind our module's functionality to. Anything bound to a module's exports object will be available to any part of our app that imports the module using `require()`.
 
-Any variables or functions not bound to the exports object, in this case the `PI` variable, will remain private to the module.
+Any variables or functions not bound to the exports object (in this case the `PI` variable), will remain private to the module.
 
 Ok, let's go back to our `index.js` file, import the circle module we just created and use its `area()` method in our main application.
 
